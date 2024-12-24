@@ -1,11 +1,13 @@
+import { BrowserRouter as Router} from "react-router-dom";
+import { Navgation } from "./routes";
+
+
 export const App = () => {
   return (
     <>
-      <div>
-        <p>
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
+      <Router>
+        <Navgation />
+      </Router>
     </>
   );
 };

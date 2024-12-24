@@ -1,0 +1,19 @@
+{
+  "name": "cadastro-react",
+  "version": "1.0.0",
+  "description": "Sistema de cadastro e listagem de clientes com react js",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start:client && npm run start:server",
+    "start:client": "npm run dev --prefix client",
+    "start:server": "npm run start --prefix server",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "express"
+  ],
+  "author": "Luis Fernando Alves de Lima",
+  "license": "ISC"
+}

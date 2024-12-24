@@ -1,0 +1,21 @@
+@use './variables.scss' as v;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+body {
+  background-color: v.$light_blue;
+}

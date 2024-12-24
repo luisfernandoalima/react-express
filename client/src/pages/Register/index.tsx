@@ -1,7 +1,7 @@
 export const Register = () => {
   return (
     <>
-    <h1>Listagem</h1>
+    <h1>Cadastro</h1>
       <form action=""></form>
     </>
   );

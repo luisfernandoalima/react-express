@@ -5,4 +5,5 @@ const app:Application = express()
 
 app.use(express.json())
 app.use("/api", route)
+
 export default app

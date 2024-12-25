@@ -12,20 +12,25 @@ export const Forms: React.FC<FormsProps> = ({ title }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  // "errors" é um state nulo ou do tipo User
   const [errors, setErrors] = useState<User | null>(null);
 
   const formSubmit = (e: FormEvent) => {
     setErrors(null);
     e.preventDefault();
 
+    // A variável "data" é do tipo User e receve os valores dos outros states
     const data: User = {
       name,
       email,
     };
 
+    // Realiza a validação com a variável "data"
     const validationError = validate(data);
 
+    // Verifica se o objeto "validationError" possui chaves
     if(Object.keys(validationError).length > 0){
+      // Se verdadeiro, "errors" recebe o objeto "validationError"
       setErrors(validationError)
     }else{
       console.log("hI")

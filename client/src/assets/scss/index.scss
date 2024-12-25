@@ -16,7 +16,7 @@ main {
   flex: 1;
   height: 100%;
   width: 100%;
-  @include m.flex(center, center, row);
+  @include m.flex(center, center, column);
 }
 
 

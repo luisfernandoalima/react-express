@@ -28,8 +28,18 @@ route.post("/register-user", async (req: Request, res: Response) => {
 
     res.status(201).json({ message: "Usuário cadastrado", type:"success" });
   } catch {
-    res.status(400).send("erro");
+    res.status(400).json({message: "Erro ao cadastrar usuário", type: "error"});
   }
 });
+
+route.get("/list-users", async (req:Request, res:Response) => {
+  try{
+    const users = await User.find()
+
+    res.status(201).json(users)
+  } catch{
+    res.status(400).json({message: "Erro em bustar usuários!", type: "error"})
+  }
+})
 
 export { route };

@@ -2,7 +2,6 @@ import { Router, Request, Response } from "express";
 
 const route = Router();
 
-import mongoose from "mongoose";
 import { User } from "../models/User";
 
 route.get("/", (req: Request, res: Response) => {
@@ -12,13 +11,11 @@ route.get("/", (req: Request, res: Response) => {
 route.post("/register-user", async (req: Request, res: Response) => {
   const { name, email } = req.body;
 
-  console.log(req.body);
-
   try {
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
-      res.status(400).json({ message: "Usuário já cadastrado" });
+      res.status(400).json({ message: "Usuário já cadastrado",  type:"error" });
       return
     }
 
@@ -29,7 +26,7 @@ route.post("/register-user", async (req: Request, res: Response) => {
 
     await newUser.save();
 
-    res.status(201).json({ message: "Deu certo" });
+    res.status(201).json({ message: "Usuário cadastrado", type:"success" });
   } catch {
     res.status(400).send("erro");
   }

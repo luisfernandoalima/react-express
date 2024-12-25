@@ -1,0 +1,14 @@
+@use '../../assets/scss/variables.scss' as v;
+
+form{
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    background-color: v.$dark_blue;
+    border: 3px solid v.$orange;
+    border-radius: 20px;
+
+    h2{
+        color: v.$yellow;
+    }
+}

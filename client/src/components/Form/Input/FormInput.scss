@@ -1,0 +1,22 @@
+@use '../../../assets/scss/variables.scss' as v;
+@use '../../../assets/scss/mixins.scss' as m;
+
+
+.Input_area{
+    @include m.flex(center, center, column);
+
+    label,input{
+        width: 100%;
+    }
+
+    input{
+        padding: 4px 10px;
+        border: 3px solid v.$yellow;
+        border-radius: 20px;
+
+        &:focus{
+            outline: none;
+            border-color: v.$orange;
+        }
+    }
+}

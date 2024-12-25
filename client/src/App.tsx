@@ -9,9 +9,7 @@ export const App = () => {
     <>
       <Router>
         <Header />
-        <main>
-          <Navgation />
-        </main>
+        <Navgation />
         <Footer />
       </Router>
     </>

@@ -1,8 +1,9 @@
+import { Forms } from "../../components/Form";
+
 export const Register = () => {
   return (
-    <>
-    <h1>Cadastro</h1>
-      <form action=""></form>
-    </>
+    <main>
+      <Forms title="Registro de Clientes"/>
+    </main>
   );
 };
